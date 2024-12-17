@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Document</title>
+        </head>
+        <body>
+            <p>Esse codigo soma os dois valores</p>
+            <form>
+                <input id="n1" placeholder="Insira o primeiro valor">
+                <input id="n2" placeholder="Insira o segundo valor">
+                <button type="button" id="btnCalcular">Calcular</button>
+            </form>
+            <p id="resultado"></p>
+            <script>
+                function soma(){
+                    document.querySelector('#btnCalcular').addEventListener('click', () => {
+                        const n1 = Number(document.querySelector('#n1').value);
+                        const n2 = Number(document.querySelector('#n2').value);
+                        const resultado = document.querySelector('#resultado');
+                        const result = n1 + n2;
+                        resultado.insertAdjacentHTML('afterbegin', `${result} `);
+                    });
+                }
+                soma();
+            </script>
+        </body>
+    </html> 
