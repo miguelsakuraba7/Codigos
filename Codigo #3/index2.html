@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Document</title>
+        </head>
+        <body>
+            <p id="txtExibido"></p>
+            <script>
+                const texto = localStorage.getItem('textoEnviado');
+                const exibido = document.querySelector('#txtExibido');
+                exibido.insertAdjacentHTML('afterbegin', `${texto}`);
+            </script>
+        </body>
+    </html>
